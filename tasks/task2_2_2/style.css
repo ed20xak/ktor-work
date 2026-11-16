@@ -1,0 +1,13 @@
+body {
+    font-family: sans-serif;
+}
+
+.crime {
+    color: darkred;
+    font-weight: bold;
+}
+
+p > a {
+    color: blue;
+    text-decoration: none;
+}
