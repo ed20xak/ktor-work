@@ -21,4 +21,32 @@ class ApplicationTest : FreeSpec({
     }
 
     // Add more tests here
+
+    "Path /hello/Sukuna yields 'Hello Sukuna!' greeting" {
+        testApplication {
+            configure()
+            val response = client.get("/hello/Sukuna")
+            response.status shouldBe HttpStatusCode.OK
+            response.headers["Content-Type"]?.shouldContain("text/plain")
+            response.bodyAsText() shouldBe "Hello Sukuna!"
+        }
+    }
+
+    "Path /hello/Gojo yields 'Hello Gojo!' greeting" {
+        testApplication {
+            configure()
+            val response = client.get("/hello/Gojo")
+            response.status shouldBe HttpStatusCode.OK
+            response.headers["Content-Type"]?.shouldContain("text/plain")
+            response.bodyAsText() shouldBe "Hello Gojo!"
+        }
+    }
+
+    "Path /hello/ yields '404 Not Found' error" {
+        testApplication {
+            configure()
+            val response = client.get("/hello/")
+            response.status shouldBe HttpStatusCode.NotFound
+        }
+    }
 })
