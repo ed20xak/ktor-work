@@ -3,5 +3,9 @@
 {% block title %}500 Internal Server Error{% endblock %}
 {% block main %}
 <h1>Server Error</h1>
-<p>{{ error.message }}</p>
+<p>Unfortunately an error has occurred: <strong>{{ error.message }}</strong></p>
+<p>Our sincerest apologies ˙◠˙</p>
+<p>We are working dilligently to fix the problem although you probably caused it!</p>
+<p>If you need immediate help please do NOT contact us. Instead, go ask chatgpt.</p>
+<a href="/" role="button">Home</a>
 {% endblock %}

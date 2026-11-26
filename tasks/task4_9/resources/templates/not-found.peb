@@ -5,4 +5,12 @@
 <h1>Error</h1>
 <p>Status code: {{ status }}</p>
 <p>Sorry, the URL <code>{{ path }}</code> is not supported by this application.</p>
+<h4>How can you fix this?</h4>
+<ul>
+    <li>Reload the page</li>
+    <li>Make sure you have typed the web site address correctly</li>
+    <li>Clear your browser cache</li>
+    <li>If all else fails please try again later</li>
+</ul>
+<a href="/" role="button">Home</a>
 {% endblock %}
